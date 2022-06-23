@@ -1,0 +1,104 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <div>
+        <div class="navbar">
+            <button id="button_1" class="navButton" onclick="changeTo(1)">EBS Footprint</button>
+            <button id="button_2" class="navButton" onclick="changeTo(2)">Consumption</button>
+            <button id="button_3" class="navButton" onclick="changeTo(3)">Volume Activity</button>
+            <!-- <button id="button_4" class="navButton" onclick="changeTo(4)">Inventory</button> -->
+            <button id="button_5" class="navButton" onclick="changeTo(5)">Cost distribution</button>
+        </div>
+        <div>
+            <div class="stat_div" id="stat_1">
+                <div class="footprint_row">
+                    <div class="footprint_col">
+                        <div id="footprint_title_1" class="footprint_title">Total Volumes</div>
+                        <div id="footprint_data_1" class="footprint_data">5</div>
+                        <div class="footprint_data_unit">Volumes</div>
+                    </div>
+                    <div class="footprint_col">
+                        <div id="footprint_title_2" class="footprint_title">Unattached EBS Volumes</div>
+                        <div id="footprint_data_2" class="footprint_data">3</div>
+                        <div class="footprint_data_unit">Volumes</div>
+                    </div>
+                    <div class="footprint_col">
+                        <div id="footprint_title_3" class="footprint_title">Total Snapshots</div>
+                        <div id="footprint_data_3" class="footprint_data">47</div>
+                        <div class="footprint_data_unit">Snapshots</div>
+                    </div>
+                    <div class="footprint_col">
+                        <div id="footprint_title_4" class="footprint_title">Orphaned Snapshots</div>
+                        <div id="footprint_data_4" class="footprint_data">13</div>
+                        <div class="footprint_data_unit">Snapshots</div>
+                    </div>
+                </div>
+                <div class="stat_title_box">
+                    <h1>Trends on EBS Volume Consumption and IOPS</h1>
+                    <h4>- Displays avg EBS volume footprint and IOPS trends</h4>
+                </div>
+                <div class="footprint_row">
+                    <div class="trend_col"><iframe fetchpriority="high" width="100%" height="100%" src="https://git-scm.com/download/win" frameborder="0"></iframe></div>                
+                    <div class="trend_col"><iframe fetchpriority="high" width="100%" height="100%" src="{{ url_for('static',filename='data/trend_1_1.html') }}" frameborder="0"></iframe></div>                
+                    <div class="trend_col"><iframe fetchpriority="high" width="100%" height="100%" src="{{ url_for('static',filename='data/trend_1_2.html') }}" frameborder="0"></iframe></div>                
+                </div>
+                <div class="stat_title_box">
+                    <h1>EBS volumes Read IO and write IO Trends</h1>
+                    <h4>- Displays avg EBS volume footprint and IOPS trends</h4>
+                </div>
+                <div class="footprint_row">
+                    <div class="trend_col"><iframe fetchpriority="high" width="100%" height="100%" src="{{ url_for('static',filename='data/trend_2_1.html') }}" frameborder="0"></iframe></div>                
+                    <div class="trend_col"><iframe fetchpriority="high" width="100%" height="100%" src="{{ url_for('static',filename='data/trend_2_2.html') }}" frameborder="0"></iframe></div>                
+                </div>
+            </div>
+            <div class="stat_div" id="stat_2">
+                <div class="stat_title_box">
+                    <h1>Consumption EBS and OnPrem Volume</h1>
+                    <h4>- Displays the size footprint for various asset types( Attached/Unattached EBS and OnPrem Volumes</h4>
+                </div>
+                <!-- <div class="iframe_container"><iframe fetchpriority="high" width="60%" height="100%" src="{{ url_for('static',filename='data/script.js') }}/consumption_1.html" frameborder="0"></iframe></div> -->
+                <div class="iframe_container"><iframe fetchpriority="high" width="60%" height="100%" src="{{ url_for('static',filename='data/consumption_2.html') }}" class="image" frameborder="0"></iframe></div>
+                <div class="stat_title_box">
+                    <h1>Volume Consumption OnPrem Vs EBS</h1>
+                    <h4>- Shows volumetype distribution(EBS/OnPrem) based on volumeSize and the corresponding snapshot lineage</h4>
+                </div>
+                <div class="iframe_container" style="height: 120vh; width: 90vw; text-align: center;"><iframe width="70%" height="100%" src="{{ url_for('static',filename='data/cost_2.html') }}" class="image" style="position: relative; transform: translateX(-50%);left: 50%;" frameborder="0"></iframe></div>
+            </div>
+            <div class="stat_div" id="stat_3">
+                <div class="stat_title_box">
+                    <h1>Region Distribution of EBS Volumes - Stack Rank by Volume age vs IOPS</h1>
+                    <h4>- This graph shows the distribution of the EBS volumes in different Regions and stack ranks between IOPS and Volume Age</h4>
+                </div>
+                <div class="iframe_container"><iframe fetchpriority="high" width="75%" height="100%" src="{{ url_for('static',filename='data/region_distribution.html') }}" frameborder="0"></iframe></div>
+                <div class="stat_title_box">
+                    <h1>Stack Rank IOPS, Age on EBS and OnPrem</h1>
+                    <h4>- Displays avg EBS volume footprint and IOPS trends</h4>
+                </div>  
+                <div class="iframe_container"><iframe fetchpriority="high" width="80%" height="100%" src="{{ url_for('static',filename='data/trend_3.html') }}" class="image" frameborder="0"></iframe></div>
+                <div class="stat_title_box">
+                    <h1>EBS Volume and Snapshot distributions for a customer</h1>
+                    <h4>- Shows the customer lineage (Customer -> Volumes(Attached/ Unattached) -> Snapshots</h4>
+                </div>  
+                <div class="iframe_container"><iframe fetchpriority="high" width="80%" height="100%" src="{{ url_for('static',filename='data/trend_4.html') }}" class="image" frameborder="0"></iframe></div>
+            </div>
+            <div class="stat_div" id="stat_4">
+            </div>
+            <div class="stat_div" id="stat_5">
+                <div class="stat_title_box">
+                    <h1>Cost Distribution EBS Vs OnPrem (month-wise)</h1>
+                </div>
+                <div class="iframe_container"><iframe fetchpriority="high" width="80%" height="100%" src="{{ url_for('static',filename='data/cost_3.html') }}" class="image" frameborder="0"></iframe></div>
+                <div class="stat_title_box">
+                    <h1>Cost Distribution EBS Vs OnPrem</h1>
+                    <h4>- Shows volumetype distribution(EBS/OnPrem) based on cost and the corresponding snapshot lineage</h4>
+                </div>
+                <div class="iframe_container" style="height: 120vh; width: 90vw; text-align: center;"><iframe width="70%" height="100%" src="{{ url_for('static',filename='data/cost_1.html') }}" class="image" style="position: relative; transform: translateX(-50%);left: 50%;" frameborder="0"></iframe></div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="{{ url_for('static',filename='json/data.json') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static',filename='json/d3_data_2.json') }}"></script>
+    <script src="{{ url_for('static',filename='scripts/script.js') }}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
+    <script src="{{ url_for('static',filename='scripts/d3_circle.js') }}"></script>
+{% endblock %}

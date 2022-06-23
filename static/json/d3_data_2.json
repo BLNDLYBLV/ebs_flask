@@ -1,0 +1,390 @@
+d3_data=`{
+    "name": "Data",
+    "children": [
+        {
+            "name": "CUST_00",
+            "children": [
+                {
+                    "name": "0-100",
+                    "children": [
+                        {
+                            "name": "EBS",
+                            "children": [
+                                {
+                                    "name": "vol-03a14dfdaf5c6722b",
+                                    "children": [
+                                        {
+                                            "name": "snap-0ed7eb835e8501dfa",
+                                            "size": 50,
+                                            "isAttached": true
+                                        },
+                                        {
+                                            "name": "snap-0ed7eb835e8501dfb",
+                                            "size": 50,
+                                            "isAttached": true
+                                        },
+                                        {
+                                            "name": "snap-0ed7eb835e8501dfc",
+                                            "size": 50,
+                                            "isAttached": true
+                                        },
+                                        {
+                                            "name": "snap-0ed7eb835e8501dfd",
+                                            "size": 50,
+                                            "isAttached": true
+                                        },
+                                        {
+                                            "name": "snap-0ed7eb835e8501dfe",
+                                            "size": 50,
+                                            "isAttached": true
+                                        },
+                                        {
+                                            "name": "snap-0ed7eb835e8501dff",
+                                            "size": 50,
+                                            "isAttached": true
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "100-200",
+                    "children": [
+                        {
+                            "name": "EBS",
+                            "children": [
+                                {
+                                    "name": "vol-03a14dfdaf5c6700f",
+                                    "children": [
+                                        {
+                                            "name": "snap-0ed7eb835e8501hm10",
+                                            "size": 100,
+                                            "isAttached": true
+                                        },
+                                        {
+                                            "name": "snap-0ed7eb835e8501hm11",
+                                            "size": 100,
+                                            "isAttached": true
+                                        },
+                                        {
+                                            "name": "snap-0ed7eb835e8501hm12",
+                                            "size": 100,
+                                            "isAttached": true
+                                        },
+                                        {
+                                            "name": "snap-0ed7eb835e8501hm13",
+                                            "size": 100,
+                                            "isAttached": true
+                                        },
+                                        {
+                                            "name": "snap-0ed7eb835e8501hm14",
+                                            "size": 100,
+                                            "isAttached": true
+                                        },
+                                        {
+                                            "name": "snap-0ed7eb835e8501hm7",
+                                            "size": 100,
+                                            "isAttached": true
+                                        },
+                                        {
+                                            "name": "snap-0ed7eb835e8501hm8",
+                                            "size": 100,
+                                            "isAttached": true
+                                        },
+                                        {
+                                            "name": "snap-0ed7eb835e8501hm9",
+                                            "size": 100,
+                                            "isAttached": true
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "vol-03a14dfdaf5c6723C",
+                                    "children": [
+                                        {
+                                            "name": "snap-0ed7eb835e8501dgb",
+                                            "size": 200,
+                                            "isAttached": true
+                                        },
+                                        {
+                                            "name": "snap-0ed7eb835e8501dgc",
+                                            "size": 200,
+                                            "isAttached": true
+                                        },
+                                        {
+                                            "name": "snap-0ed7eb835e8501dgd",
+                                            "size": 200,
+                                            "isAttached": true
+                                        },
+                                        {
+                                            "name": "snap-0ed7eb835e8501dge",
+                                            "size": 200,
+                                            "isAttached": true
+                                        },
+                                        {
+                                            "name": "snap-0ed7eb835e8501dgf",
+                                            "size": 200,
+                                            "isAttached": true
+                                        },
+                                        {
+                                            "name": "snap-0ed7eb835e8501dgh",
+                                            "size": 200,
+                                            "isAttached": true
+                                        },
+                                        {
+                                            "name": "snap-0ed7eb835e8501dgi",
+                                            "size": 200,
+                                            "isAttached": true
+                                        },
+                                        {
+                                            "name": "snap-0ed7eb835e8501dgj",
+                                            "size": 200,
+                                            "isAttached": true
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "name": "OnPrem",
+                            "children": [
+                                {
+                                    "name": "vol-03a14dfdaf5c6711g",
+                                    "children": [
+                                        {
+                                            "name": "snap-0ed7eb835e8501hm15",
+                                            "size": 120,
+                                            "isAttached": true
+                                        },
+                                        {
+                                            "name": "snap-0ed7eb835e8501hm16",
+                                            "size": 120,
+                                            "isAttached": true
+                                        },
+                                        {
+                                            "name": "snap-0ed7eb835e8501hm17",
+                                            "size": 120,
+                                            "isAttached": true
+                                        },
+                                        {
+                                            "name": "snap-0ed7eb835e8501hm18",
+                                            "size": 120,
+                                            "isAttached": true
+                                        },
+                                        {
+                                            "name": "snap-0ed7eb835e8501hm19",
+                                            "size": 120,
+                                            "isAttached": true
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "200-300",
+                    "children": [
+                        {
+                            "name": "EBS",
+                            "children": [
+                                {
+                                    "name": "vol-03a14dfdaf5c6733l",
+                                    "children": [
+                                        {
+                                            "name": "snap-0ed7eb835e8501hm29",
+                                            "size": 1100,
+                                            "isAttached": true
+                                        },
+                                        {
+                                            "name": "snap-0ed7eb835e8501hm30",
+                                            "size": 1100,
+                                            "isAttached": true
+                                        },
+                                        {
+                                            "name": "snap-0ed7eb835e8501hm31",
+                                            "size": 1100,
+                                            "isAttached": true
+                                        },
+                                        {
+                                            "name": "snap-0ed7eb835e8501hm32",
+                                            "size": 1100,
+                                            "isAttached": true
+                                        },
+                                        {
+                                            "name": "snap-0ed7eb835e8501hm33",
+                                            "size": 1100,
+                                            "isAttached": true
+                                        },
+                                        {
+                                            "name": "snap-0ed7eb835e8501hm34",
+                                            "size": 1100,
+                                            "isAttached": true
+                                        },
+                                        {
+                                            "name": "snap-0ed7eb835e8501hm35",
+                                            "size": 1100,
+                                            "isAttached": true
+                                        },
+                                        {
+                                            "name": "snap-0ed7eb835e8501hm36",
+                                            "size": 1100,
+                                            "isAttached": true
+                                        },
+                                        {
+                                            "name": "snap-0ed7eb835e8501hm37",
+                                            "size": 1100,
+                                            "isAttached": true
+                                        },
+                                        {
+                                            "name": "snap-0ed7eb835e8501hm38",
+                                            "size": 1100,
+                                            "isAttached": true
+                                        },
+                                        {
+                                            "name": "snap-0ed7eb835e8501hm39",
+                                            "size": 1100,
+                                            "isAttached": true
+                                        },
+                                        {
+                                            "name": "snap-0ed7eb835e8501hm40",
+                                            "size": 1100,
+                                            "isAttached": true
+                                        },
+                                        {
+                                            "name": "snap-0ed7eb835e8501hm41",
+                                            "size": 1100,
+                                            "isAttached": true
+                                        },
+                                        {
+                                            "name": "snap-0ed7eb835e8501hm42",
+                                            "size": 1100,
+                                            "isAttached": true
+                                        },
+                                        {
+                                            "name": "snap-0ed7eb835e8501hm43",
+                                            "size": 1100,
+                                            "isAttached": true
+                                        },
+                                        {
+                                            "name": "snap-0ed7eb835e8501hm44",
+                                            "size": 1100,
+                                            "isAttached": true
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "name": "OnPrem",
+                            "children": [
+                                {
+                                    "name": "vol-03a14dfdaf5c6734d",
+                                    "children": [
+                                        {
+                                            "name": "snap-0ed7eb835e8501hm0",
+                                            "size": 300,
+                                            "isAttached": true
+                                        },
+                                        {
+                                            "name": "snap-0ed7eb835e8501hm1",
+                                            "size": 300,
+                                            "isAttached": true
+                                        },
+                                        {
+                                            "name": "snap-0ed7eb835e8501hm2",
+                                            "size": 300,
+                                            "isAttached": true
+                                        },
+                                        {
+                                            "name": "snap-0ed7eb835e8501hm3",
+                                            "size": 300,
+                                            "isAttached": true
+                                        },
+                                        {
+                                            "name": "snap-0ed7eb835e8501hm4",
+                                            "size": 300,
+                                            "isAttached": true
+                                        },
+                                        {
+                                            "name": "snap-0ed7eb835e8501hm5",
+                                            "size": 300,
+                                            "isAttached": true
+                                        },
+                                        {
+                                            "name": "snap-0ed7eb835e8501hm6",
+                                            "size": 300,
+                                            "isAttached": true
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "300-inf",
+                    "children": [
+                        {
+                            "name": "EBS",
+                            "children": [
+                                {
+                                    "name": "vol-03a14dfdaf5c6722f",
+                                    "children": [
+                                        {
+                                            "name": "snap-0ed7eb835e8501hm20",
+                                            "size": 600,
+                                            "isAttached": true
+                                        },
+                                        {
+                                            "name": "snap-0ed7eb835e8501hm21",
+                                            "size": 600,
+                                            "isAttached": true
+                                        },
+                                        {
+                                            "name": "snap-0ed7eb835e8501hm22",
+                                            "size": 600,
+                                            "isAttached": true
+                                        },
+                                        {
+                                            "name": "snap-0ed7eb835e8501hm23",
+                                            "size": 600,
+                                            "isAttached": true
+                                        },
+                                        {
+                                            "name": "snap-0ed7eb835e8501hm24",
+                                            "size": 600,
+                                            "isAttached": true
+                                        },
+                                        {
+                                            "name": "snap-0ed7eb835e8501hm25",
+                                            "size": 600,
+                                            "isAttached": true
+                                        },
+                                        {
+                                            "name": "snap-0ed7eb835e8501hm26",
+                                            "size": 600,
+                                            "isAttached": true
+                                        },
+                                        {
+                                            "name": "snap-0ed7eb835e8501hm27",
+                                            "size": 600,
+                                            "isAttached": true
+                                        },
+                                        {
+                                            "name": "snap-0ed7eb835e8501hm28",
+                                            "size": 600,
+                                            "isAttached": true
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}`
