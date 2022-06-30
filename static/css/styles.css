@@ -7,6 +7,7 @@
 }
 body{
     margin: 0;
+    overflow-y: hidden;
     /* padding-bottom: 50px; */
     /* background-color: #F4F6F9; */
 }
@@ -126,7 +127,7 @@ a{
     font-size: small;
 }
 .reporting_sub_item{
-    margin-left: 20px;
+    margin-left: 10px;
 }
 .selected_nav_item{
     font-weight: bolder;
@@ -193,7 +194,7 @@ a{
     padding: 0px 40px;
     margin: auto;
     margin-top: 40px;
-    width: 80%;
+    width: 85%;
     background-color: white;
     border-radius: 15px;
     /* box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1), 0 3px 10px 0 rgba(0, 0, 0, 0.1); */
@@ -236,7 +237,7 @@ a{
 }
 
 .footprint_col{
-    width: 23%;
+    width: 31%;
     display: flex;
     background-color: #ffffff;
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1), 0 3px 10px 0 rgba(0, 0, 0, 0.1);
@@ -448,12 +449,31 @@ a{
     margin: 50px auto;
   }
 #wordtree_basic{
+    position: relative;
     margin: auto;
     overflow: hidden;
     width: 850px;
     border-radius: 8px;
     padding: 10px 30px;
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1), 0 3px 10px 0 rgba(0, 0, 0, 0.1);
+}
+.color_box{
+    position: absolute;
+    left: 18%;
+    top: 18%;
+    z-index: 20;
+}
+.ebs_color_box{
+    width: 10px;
+    height: 10px;
+    background-color: #32DACF;
+    border: none;
+}
+.onprem_color_box{
+    width: 10px;
+    height: 10px;
+    background-color: #00526F;
+    border: none;
 }
 
 /* dashboard css */
@@ -566,7 +586,10 @@ a{
 .modal-content {
     border-radius: 10px;
   background-color: #fefefe;
-  margin: 15% auto; /* 15% from the top and centered */
+  margin: 0 auto; /* 15% from the top and centered */
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
   padding: 20px 40px;
   width: 30%; /* Could be more or less, depending on screen size */
 }

@@ -1,1 +1,1 @@
-json_data = '{"Volume Type": ["Total Volumes", "Unattached EBS Volumes", "Total Snapshots", "Orphaned Snapshots", "Snapshots > 30 days"], "EBS": [5, 3, 47, 13, 47]}'
+json_data = '{"Volume Type": ["Total Volumes", "Unattached EBS Volumes", "Unprotected Volumes", "Total Snapshots", "Orphaned Snapshots", "Snapshots > 30 days"], "EBS": [5, 3, 2, 47, 7, 13]}'
