@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 
-{% block content %}
+{% block login %}
     <div class="auth_body">
         <div class="auth_container">
             <div class="auth_title">Sign In</div>
@@ -9,18 +9,24 @@
                 <form method="post" action="login">
                     <div class="auth_input_box">
                         <img class="auth_input_icon" src="{{ url_for('static',filename='images/mail.png') }}" alt="">
-                        <input placeholder="Email" class="auth_input" type="email" name="email" id="">
+                        <input placeholder="Email" class="auth_input" type="email" name="email" >
                     </div>
                     <div class="auth_input_box">
                         <img class="auth_input_icon" src="{{ url_for('static',filename='images/password.png') }}" alt="">
-                        <input placeholder="Password" class="auth_input" type="password" name="password" id="">
+                        <input placeholder="Password" class="auth_input" type="password" name="password">
                     </div>
                     <input class="auth_submit_btn" type="submit" value="Sign In">
                 </form>
             </div>
         </div>
         {% if error %}
-        <div class="pop_op error_pop_up">{{ error_msg }}</div>
+
+        <div class="pop_up error_pop_up" style="display: block;">{{ error_msg }}</div>
         {% endif %}
     </div>
+    <script>
+        const show_pop = () => {
+            document.getElementsByClassName('pop_up')[0].style.display='block'
+        }
+    </script>
 {% endblock %}

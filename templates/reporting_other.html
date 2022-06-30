@@ -1,0 +1,83 @@
+{% extends "page_nav.html" %}
+
+{% block content %}
+    <div>
+        <div class="navbar">
+            <button id="button_1" class="navButton" onclick="changeTo(1)">Consumption</button>
+            <button id="button_2" class="navButton" onclick="changeTo(2)">Volume Activity</button>
+            <button id="button_3" class="navButton" onclick="changeTo(3)">Cost distribution</button>
+            <!-- <button id="button_4" class="navButton" onclick="changeTo(4)">Inventory</button> -->
+            <!-- <button id="button_5" class="navButton" onclick="changeTo(5)">Cost distribution</button> -->
+        </div>
+        <div>
+            <div class="stat_div" id="stat_1">
+                <div class="white_box">
+                    <div class="stat_title_box">
+                        <h2>Consumption EBS and OnPrem Volume</h2>
+                        <h4>- Displays the size footprint for various asset types( Attached/Unattached EBS and OnPrem Volumes</h4>
+                    </div>
+                    <!-- <div class="iframe_container"><iframe fetchpriority="high" width="60%" height="100%" src="{{ url_for('static',filename='data/script.js') }}/consumption_1.html" frameborder="0"></iframe></div> -->
+                    <div class="iframe_container"><iframe marginwidth="0" marginheight="0" fetchpriority="high" width="60%" height="100%" src="{{ url_for('static',filename='data/consumption_2.html') }}" class="image" frameborder="0"></iframe></div>
+                </div>
+                <div class="white_box">
+                    <div class="stat_title_box">
+                        <h2>Volume Consumption OnPrem Vs EBS</h2>
+                        <h4>- Shows volumetype distribution(EBS/OnPrem) based on volumeSize and the corresponding snapshot lineage</h4>
+                    </div>
+                    <div style="margin:auto;margin-top:40px;height: 100vh; width: 69.8vw;" class="iframe_container" ><iframe marginwidth="0" marginheight="0" width="70%" height="100%" src="{{ url_for('static',filename='data/cost_2.html') }}" class="image" style="" frameborder="0"></iframe></div>
+                </div>
+            </div>
+            <div class="stat_div" id="stat_2">
+                <div class="white_box">
+                    <div class="stat_title_box">
+                        <h2>Region Distribution of Volumes</h2>
+                        <h4>- This graph shows the distribution of the volumes in different Regions</h4>
+                    </div>
+                    <div class="iframe_container"><iframe marginwidth="0" marginheight="0" fetchpriority="high" width="85%" height="90%" src="{{ url_for('static',filename='data/volumeMap.html') }}" frameborder="0"></iframe></div>
+                </div>
+                <div class="white_box">
+                    <div class="stat_title_box">
+                        <h2>Region Distribution of EBS Volumes - Stack Rank by Volume age vs IOPS</h2>
+                        <h4>- This graph shows the distribution of the EBS volumes in different Regions and stack ranks between IOPS and Volume Age</h4>
+                    </div>
+                    <div class="iframe_container"><iframe marginwidth="0" marginheight="0" fetchpriority="high" width="75%" height="100%" src="{{ url_for('static',filename='data/region_distribution.html') }}" frameborder="0"></iframe></div>
+                </div>
+                <div class="white_box">
+                    <div class="stat_title_box">
+                        <h2>Stack Rank IOPS, Age on EBS and OnPrem</h2>
+                        <h4>- Displays avg EBS volume footprint and IOPS trends</h4>
+                    </div>  
+                    <div class="iframe_container"><iframe marginwidth="0" marginheight="0" fetchpriority="high" width="80%" height="100%" src="{{ url_for('static',filename='data/trend_3.html') }}" class="image" frameborder="0"></iframe></div>
+                </div>
+                <div class="white_box">
+                    <div class="stat_title_box">
+                        <h2>EBS Volume and Snapshot distributions for a customer</h2>
+                        <h4>- Shows the customer lineage (Customer -> Volumes(Attached/ Unattached) -> Snapshots</h4>
+                    </div>  
+                    <div class="iframe_container"><iframe marginwidth="0" marginheight="0" fetchpriority="high" width="80%" height="100%" src="{{ url_for('static',filename='data/trend_4.html') }}" class="image" frameborder="0"></iframe></div>
+                </div>
+            </div>
+            <div class="stat_div" id="stat_3">
+                <div class="white_box">
+                    <div class="stat_title_box">
+                        <h2>Cost Distribution EBS Vs OnPrem (month-wise)</h2>
+                    </div>
+                    <div class="iframe_container"><iframe marginwidth="0" marginheight="0" fetchpriority="high" width="80%" height="100%" src="{{ url_for('static',filename='data/cost_3.html') }}" class="image" frameborder="0"></iframe></div>
+                </div>
+                <div class="white_box">
+                    <div class="stat_title_box">
+                        <h2>Cost Distribution EBS Vs OnPrem</h2>
+                        <h4>- Shows volumetype distribution(EBS/OnPrem) based on cost and the corresponding snapshot lineage</h4>
+                    </div>
+                    <div style="margin:auto;margin-top:40px;height: 100vh; width: 69.8vw;" class="iframe_container" ><iframe marginwidth="0" marginheight="0" width="70%" height="100%" src="{{ url_for('static',filename='data/cost_1.html') }}" class="image" style="" frameborder="0"></iframe></div>
+                </div>
+                <!-- <div class="iframe_container" style="height: 120vh; width: 75vw; text-align: center;"><iframe marginwidth="0" marginheight="0" width="70%" height="100%" src="{{ url_for('static',filename='data/cost_1.html') }}" class="image" style="position: relative; transform: translateX(-50%);left: 40%;" frameborder="0"></iframe></div> -->
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="{{ url_for('static',filename='json/data.json') }}"></script>
+    <!-- <script type="text/javascript" src="{{ url_for('static',filename='json/d3_data_2.json') }}"></script> -->
+    <script src="{{ url_for('static',filename='scripts/script.js') }}"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
+    <script src="{{ url_for('static',filename='scripts/d3_circle.js') }}"></script> -->
+{% endblock %}

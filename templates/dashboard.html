@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+{% block dashboard %}
+    <h1 style="text-align: center;margin: 50px auto;">Welcome to Data Services Cloud Console</h1>
+    <div class="dashboard_container">
+        <div class="dashboard_row">
+            <div class="dashboard_item">
+                <p style="background-color: #11CCFF;">Data Ops Manager</p>
+                <a href="/reporting/ebs"><button>View</button></a>
+            </div>
+            <div class="dashboard_item">
+                <p style="background-color: #1973CB;">Cloud Physics</p>
+                <a href="/reporting/ebs"><button>View</button></a>
+            </div>
+            <div class="dashboard_item">
+                <p style="background-color: #2AD2C9;">InfoSight</p>
+                <a href="/reporting/ebs"><button>View</button></a>
+            </div>
+        </div>
+        <div class="dashboard_row">
+            <div class="dashboard_item">
+                <p style="background-color: #5992dd;">Audit Log</p>
+                <a href="/reporting/ebs"><button>View</button></a>
+            </div>
+            <div class="dashboard_item">
+                <p style="background-color: #77edaa;">Intent Based Provisioning</p>
+                <a href="/reporting/ebs"><button>View</button></a>
+            </div>
+            <div class="dashboard_item">
+                <p style="background-color: #ab6be6;">Data Panorama</p>
+                <a href="/reporting/ebs"><button>View</button></a>
+            </div>
+        </div>
+    </div>
+{% endblock %}

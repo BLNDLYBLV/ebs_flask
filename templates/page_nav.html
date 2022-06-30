@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block page_nav %}
+<div class="page">
+    <div class="page_navbar">
+        <a href="/" class="back_link"> &lt; back to menu</a>
+        <hr>
+        <div onclick="toggleMenu()" class="page_nav_item {{'selected_nav_item' if request.path=='/'}}">  Reporting </div>
+        <hr class="reporting_sub_item"></hr>
+        <a href="/reporting/ebs"><div class="reporting_sub_item page_nav_item {{'selected_nav_item' if request.path=='/reporting/ebs'}}">  EBS Footprint </div> </a>
+        <a href="/reporting/other"><div class="reporting_sub_item page_nav_item {{'selected_nav_item' if request.path=='/reporting/other'}}"> Public and private cloud  </div> </a>
+        <hr></hr>
+        <a href="/backup"><div class="page_nav_item {{'selected_nav_item' if request.path=='/backup'}}">  Backup Recomendation </div> </a>
+        <hr></hr>
+        <a href="/applineage"><div class="page_nav_item {{'selected_nav_item' if request.path=='/applineage'}}" >  Application Lineage </div> </a>
+
+    </div>
+    <div class="page_content">{% block content %}{% endblock %}</div>
+</div>
+<script type="text/javascript" src="{{ url_for('static',filename='scripts/page_nav.js') }}"></script>
+
+{% endblock %}

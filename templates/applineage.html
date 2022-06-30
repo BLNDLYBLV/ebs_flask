@@ -1,0 +1,33 @@
+{% extends "page_nav.html" %}
+
+{% block content %}
+<link rel="stylesheet" src="https://cdn.jsdelivr.net/gh/cotton123236/zoomist@latest/dist/zoomist.min.css"/>
+<div width="85vw">
+    <div class="white_box">
+        <div class="stat_title_box">
+            <h1>Customer's Application Wordtree</h1>
+            <h4>- Displays every application wordtree for a customer</h4>
+        </div>
+        <div id="wordtree_basic"></div>
+    </div>
+    <div class="white_box">
+        <div class="stat_title_box">
+            <h1>Customer's Application Lineage</h1>
+            <h4>- Displays every application lineage for a customer</h4>
+            <h4>- hover over the image to see the preview</h4>
+        </div>
+        <div style="position:relative">
+            <div class="img-zoom-container">
+                <div style="position:relative">
+                <img id="myimage" width="100%" src="{{ url_for('static',filename='images/cust_00.png') }}" alt="" srcset="">
+                <!-- <img  src="img_girl.jpg" width="300" height="240" alt="Girl"> -->
+                </div>
+            </div>
+            <div id="myresult" class="img-zoom-result"></div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<script type="text/javascript" src="{{ url_for('static',filename='json/wordtree.json') }}"></script>
+<script type="text/javascript" src="{{ url_for('static',filename='scripts/applineage.js') }}"></script>
+{% endblock %}

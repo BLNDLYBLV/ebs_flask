@@ -1,0 +1,63 @@
+{% extends "page_nav.html" %}
+
+{% block content %}
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <div style="display: flex;margin-top: 20px;">
+              <p class="bold" style="margin-right: 20px;">Volume Id: </p>
+              <p id="modal_vol_id"></p>
+          </div>
+          <div style="display: flex;">
+            <p class="bold" style="margin-right: 20px;">Volume Region: </p>
+            <p id="modal_vol_region"></p>
+        </div>
+        <div class="modal_table">
+            <div class="modal_table_row">
+                <div class="modal_table_item"></div>
+                <div class="modal_table_item bold">EBS</div>
+                <div class="modal_table_item bold">OnPrem</div>
+            </div>
+            <div class="modal_table_row">
+                <div class="modal_table_item bold">Cost</div>
+                <div id="cost_ebs" class="modal_table_item"></div>
+                <div id="cost_onprem" class="modal_table_item"></div>
+            </div>
+            <div class="modal_table_row">
+                <div class="modal_table_item bold">IOPS</div>
+                <div id="iops_ebs" class="modal_table_item"></div>
+                <div id="iops_onprem" class="modal_table_item"></div>
+            </div>
+            <div class="modal_table_row">
+                <div class="modal_table_item bold">Backup Time</div>
+                <div id="time_ebs" class="modal_table_item"></div>
+                <div id="time_onprem" class="modal_table_item"></div>
+            </div>
+            <div class="modal_table_row">
+                <div class="modal_table_item bold"></div>
+                <div id="time_ebs" class="modal_table_item">
+                    <button class="create_btn" onclick="show_created_popup('EBS')">Create EBS backup</button>
+                </div>
+                <div id="time_onprem" class="modal_table_item">
+                    <button class="create_btn" onclick="show_created_popup('onPrem')">Create onPrem backup</button>
+                </div>
+            </div>
+        </div>
+        </div>
+    </div>
+    <div class="stat_title_box" style="margin-top:20px;width: 90%;">
+        <h2>Backup Recomendation for current volumes</h1>
+    </div>
+    <div id="backup_table">
+        <div class="backup_table_row backup_table_title_row">
+            <div class="backup_table_item">Volume Id</div>
+            <div class="backup_table_item">Volume Size</div>
+            <div class="backup_table_item">Creation time</div>
+            <div class="backup_table_item">Region</div>
+            <div class="backup_table_item">Recomendation</div>
+        </div>
+    </div>
+    <div id="creating_popup" class="pop_up info_pop_up"></div>
+    <script type="text/javascript" src="{{ url_for('static',filename='json/backup.json') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static',filename='scripts/backup.js') }}"></script>
+{% endblock %}
